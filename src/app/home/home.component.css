@@ -1,0 +1,132 @@
+.card__principal {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.card__principal-mobile {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.card__principal-web {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+p {
+  white-space: normal;
+  display: block;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.button {
+  float: right;
+}
+
+.redondo {
+  color: white;
+  border-radius: 100%;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  border: 1px solid transparent;
+  line-height: 50px;
+  float: left;
+}
+.redondo--color-braveza {
+  background-color: #d94e41;
+}
+
+.redondo--color-esperteza {
+  background-color: #395953;
+}
+
+.redondo--color-estranheza {
+  background-color: #8c856d;
+}
+
+.redondo--color-firmeza {
+  background-color: #412c38;
+}
+
+.redondo--color-sutileza {
+  background-color: #7638c2;
+}
+
+.boxEtapas {
+  overflow: hidden;
+  width: 48%;
+  /* float: left; */
+  text-align: center;
+}
+.etapas {
+  margin: 0 auto;
+  text-align: center;
+}
+.etapas ul {
+  list-style: none;
+}
+.etapas ul,
+li {
+  margin-bottom: 15px;
+  width: 100%;
+  display: table;
+  line-height: 50px;
+}
+
+.title {
+  float: left;
+  text-indent: 20px;
+}
+
+.card__princpal--preview {
+}
+
+.description {
+  float: left;
+  text-align: left;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-radio-button {
+  padding: 10px;
+}
+
+.card-character-web {
+  width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  p {
+    white-space: normal;
+    display: block;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+  .boxEtapas {
+    overflow: hidden;
+    width: 100%;
+    float: left;
+  }
+  .card__principal-web {
+    display: none;
+  }
+  .card__principal-mobile {
+    display: block;
+  }
+}
+
+mat-grid-list {
+  height: 100%;
+}
+
+.p-personagem {
+  text-align: left;
+}
