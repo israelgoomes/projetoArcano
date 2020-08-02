@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>ico_assistencia_azul</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1.-Estilos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.3-Iconografia" transform="translate(-254.000000, -375.000000)">
+            <g id="ico_assistencia_azul" transform="translate(254.000000, 375.000000)">
+                <circle id="bg" fill="#0060A8" cx="37" cy="37" r="37"></circle>
+                <path d="M53,44 C50.5,44 48.1,43.6 45.86,42.86 C45.16,42.64 44.38,42.8 43.82,43.34 L39.42,47.74 C33.76,44.86 29.12,40.24 26.24,34.56 L30.64,30.14 C31.2,29.62 31.36,28.84 31.14,28.14 C30.4,25.9 30,23.5 30,21 C30,19.9 29.1,19 28,19 L21,19 C19.9,19 19,19.9 19,21 C19,39.78 34.22,55 53,55 C54.1,55 55,54.1 55,53 L55,46 C55,44.9 54.1,44 53,44 Z M51,37 L55,37 C55,27.06 46.94,19 37,19 L37,23 C44.74,23 51,29.26 51,37 Z M43,37 L47,37 C47,31.48 42.52,27 37,27 L37,31 C40.32,31 43,33.68 43,37 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-raio_inativo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="20.2165527 45.6814633 30.7380342 47.5759296 28.5882538 51.6576754 25.1527526 58.1817153 33.2693834 51.8829551 41.2588246 45.6814633 30.7380342 43.787501 36.3219333 33.1817153"></polygon>
+    </defs>
+    <g id="1.-Estilos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.3.1-Iconografia---Causas-inativas" transform="translate(-599.000000, -320.000000)">
+            <g id="ico-raio_inativo" transform="translate(599.000000, 320.000000)">
+                <circle id="bg_ico-copy-12" fill="#999999" cx="37" cy="37" r="37"></circle>
+                <path d="M39.2222222,16 C35.5905836,16 32.4223844,17.9773956 30.7361111,20.9166667 C30.0681871,20.6156311 29.3357427,20.4444444 28.5555556,20.4444444 C25.8767258,20.4444444 23.6712618,22.4266622 23.2916667,25 C19.7191858,25.6002889 17,28.7013333 17,32.4444444 C17,36.6172444 20.3827373,40 24.5555556,40 L46.7777778,40 C50.950596,40 54.3333333,36.6172444 54.3333333,32.4444444 C54.3333333,29.0386667 52.0832876,26.1518711 48.9861111,25.2083333 C48.6899324,20.0744711 44.4303098,16 39.2222222,16 Z" id="Path" fill="#FFFFFF"></path>
+                <g id="Page-1-Copy-2" transform="translate(30.737689, 45.681715) rotate(1.000000) translate(-30.737689, -45.681715) ">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#999999" stroke-width="3" d="M33.0194379,42.6740896 L44.8384608,44.8017609 L42.1785783,46.8663908 L34.1890043,53.0679857 L20.5952141,63.6171935 L23.8255259,57.4828096 L27.2610766,50.9586756 L28.4563576,48.6892192 L16.6367953,46.5610245 L40.8789253,27.7461624 L33.0194379,42.6740896 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

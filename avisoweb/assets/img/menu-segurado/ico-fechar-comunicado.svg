@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>ico_fechar-com</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1.-Preenchimento-de-sinistro" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.1-Preenchimento_Atendente_aberto_MAPFRE-(Web)" transform="translate(-520.000000, -1969.000000)">
+            <g id="Group-6" transform="translate(511.000000, 1877.000000)">
+                <g id="Group-4" transform="translate(0.000000, 84.000000)">
+                    <g id="ico_fechar">
+                        <g id="ico_fechar-com">
+                            <rect id="space" fill="#D8D8D8" opacity="0" transform="translate(15.000000, 15.000000) scale(-1, 1) translate(-15.000000, -15.000000) " x="0" y="0" width="30" height="30"></rect>
+                            <g id="Group-2" transform="translate(9.000000, 9.000000)" stroke="#979797" stroke-width="2" stroke-linecap="round">
+                                <path d="M1.11542213,11.8327598 L12.2094236,0.738758279" id="Line-Copy-2"></path>
+                                <path d="M1.43370727,11.6000774 L12.5277088,0.506075925" id="Line-Copy-3" transform="translate(6.882353, 6.117647) scale(1, -1) translate(-6.882353, -6.117647) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
