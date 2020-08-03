@@ -35,7 +35,7 @@
           Ileso
           <mat-slider
             [(ngModel)]="valor"
-            name="teste"
+            name="slide"
             thumbLabel
             [displayWith]="formatLabelIleso"
             tickInterval="1"
@@ -66,7 +66,7 @@
         <ng-template [disabled]="!arcano.nome" matStepLabel></ng-template>
         <mat-form-field appearance="fill">
           <mat-label>Gênero</mat-label>
-          <mat-select [(ngModel)]="arcano.genero" name="teste">
+          <mat-select [(ngModel)]="arcano.genero" name="select">
             <mat-option *ngFor="let genero of generos" [value]="genero">
               {{ genero }}
             </mat-option>
@@ -75,7 +75,7 @@
 
         <mat-form-field appearance="fill">
           <mat-label>Roupas</mat-label>
-          <mat-select [(ngModel)]="arcano.roupa" name="teste">
+          <mat-select [(ngModel)]="arcano.roupa" name="select">
             <mat-option *ngFor="let roupa of roupas" [value]="roupa">
               {{ roupa }}
             </mat-option>
@@ -84,7 +84,7 @@
 
         <mat-form-field appearance="fill">
           <mat-label>Olhos</mat-label>
-          <mat-select [(ngModel)]="arcano.olhos" name="teste">
+          <mat-select [(ngModel)]="arcano.olhos" name="select">
             <mat-option *ngFor="let olho of olhos" [value]="olho">
               {{ olho }}
             </mat-option>
@@ -241,8 +241,6 @@
   "
   *ngIf="showValue"
 >
-  TESTE
-
   <mat-grid-list cols="2">
     <mat-grid-tile>
       <div class="col-sm-6 boxEtapas">
