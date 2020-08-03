@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-magia-combativa',
@@ -19,7 +20,7 @@ export class MagiaCombativaComponent implements OnInit {
   neocromantica: boolean = false;
   habilitaEfeitos: boolean = false;
 
-  constructor() {
+  constructor(private router: Router) {
     let pontosExtras = JSON.parse(localStorage.getItem('pontosExtras'));
     console.log(pontosExtras.magiaCombativaPontos);
     this.totalPoints += pontosExtras.magiaCombativaPontos;
@@ -96,5 +97,6 @@ export class MagiaCombativaComponent implements OnInit {
     }
 
     localStorage.setItem('personagem', JSON.stringify(arcano));
+    this.router.navigate(['/movimentos']);
   }
 }

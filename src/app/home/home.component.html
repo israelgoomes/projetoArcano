@@ -20,7 +20,7 @@
             mat-raised-button
             matStepperNext
           >
-            Next
+            Próximo
           </button>
         </div>
       </form>
@@ -61,10 +61,10 @@
             mat-raised-button
             matStepperNext
           >
-            Next
+            Próximo
           </button>
           <button class="button" mat-raised-button matStepperPrevious>
-            Back
+            Voltar
           </button>
         </div>
       </form>
@@ -75,7 +75,7 @@
       <mat-radio-group
         aria-label="Select an option"
         [(ngModel)]="value"
-        (change)="teste()"
+        (change)="adicionaValores()"
       >
         <mat-radio-button value="1"
           ><p>
@@ -105,11 +105,11 @@
       </mat-radio-group>
 
       <div>
-        <button class="button" mat-raised-button matStepperPrevious>
-          Back
-        </button>
         <button class="button" mat-raised-button (click)="salvarPersonagem()">
           Salvar
+        </button>
+        <button class="button" mat-raised-button matStepperPrevious>
+          Voltar
         </button>
       </div>
     </mat-step>

@@ -22,6 +22,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MagiaCombativaComponent } from './magia-combativa/magia-combativa.component';
 import { MovimentosComponent } from './movimentos/movimentos.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { EquipamentosComponent } from './equipamentos/equipamentos.component';
+import { PersonagemComponent } from './personagem/personagem.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     NivelComponent,
     MagiaCombativaComponent,
     MovimentosComponent,
+    EquipamentosComponent,
+    PersonagemComponent,
   ],
   imports: [
     FormsModule,

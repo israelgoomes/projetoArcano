@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  teste() {
+  adicionaValores() {
     console.log(JSON.stringify(this.value));
     this.showValue = true;
     switch (this.value) {

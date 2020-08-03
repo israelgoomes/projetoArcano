@@ -1,0 +1,31 @@
+<mat-expansion-panel expanded="true" hideToggle class="card__principal">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h2>Escolha uma arma reserva:</h2>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <mat-radio-group aria-label="Select an option" [(ngModel)]="value">
+    <mat-radio-button value="1"
+      ><p>
+        Revólver velhor [2-dano perto, recarga barulhenta]
+      </p></mat-radio-button
+    >
+    <mat-radio-button value="2">
+      <p>
+        Faca ritualística [1-dano contato]
+      </p>
+    </mat-radio-button>
+    <mat-radio-button value="3"
+      ><p>
+        Espada herdada [2-dano contato brutal]
+      </p></mat-radio-button
+    >
+  </mat-radio-group>
+
+  <mat-action-row>
+    <button class="button" mat-raised-button routerLink="/nivel">
+      Salvar
+    </button>
+  </mat-action-row>
+</mat-expansion-panel>

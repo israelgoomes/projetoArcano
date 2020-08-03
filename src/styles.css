@@ -3,5 +3,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-  background-image: url("./assets/img/img_fundo.jpg");
+  background-image: url("./assets/img/sabotador_Arcano.jpg");
+  margin: 0px;
 }

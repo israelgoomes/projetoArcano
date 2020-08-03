@@ -1,0 +1,9 @@
+.card__principal {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+mat-radio-button {
+  width: 100%;
+}
