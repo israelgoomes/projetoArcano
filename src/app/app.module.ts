@@ -24,6 +24,8 @@ import { MovimentosComponent } from './movimentos/movimentos.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { EquipamentosComponent } from './equipamentos/equipamentos.component';
 import { PersonagemComponent } from './personagem/personagem.component';
+import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { PersonagemComponent } from './personagem/personagem.component';
     MovimentosComponent,
     EquipamentosComponent,
     PersonagemComponent,
+    DialogConfirmComponent,
   ],
   imports: [
     FormsModule,
@@ -53,6 +56,7 @@ import { PersonagemComponent } from './personagem/personagem.component';
     MatExpansionModule,
     MatCheckboxModule,
     MatGridListModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

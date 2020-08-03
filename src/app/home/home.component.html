@@ -13,6 +13,42 @@
             required
           />
         </mat-form-field>
+
+        <p>
+          Marque uma caixa de Sorte para alterar uma rolagem para 12 ou evitar
+          todo o dano de um ferimento.
+        </p>
+        <p>
+          Salvo
+          <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1"
+            min="1"
+            max="6"
+          ></mat-slider>
+          condenado
+        </p>
+
+        <p>Quando você chegar em 4 ou mais, marque ‘Instável’.</p>
+        <p>
+          Ileso
+          <mat-slider
+            [(ngModel)]="valor"
+            name="teste"
+            thumbLabel
+            [displayWith]="formatLabelIleso"
+            tickInterval="1"
+            min="1"
+            max="7"
+          ></mat-slider>
+          Morrendo
+        </p>
+        <p class="p_nao-instavel" *ngIf="valor <= 4">Não instável</p>
+        <p class="p_instavel" *ngIf="valor >= 4">
+          Instável(Lesões instáveis pioram com o tempo)
+        </p>
+
         <div>
           <button
             [disabled]="!arcano.nome"
@@ -118,7 +154,11 @@
 
 <!-- ************************************************ -->
 <mat-card
-  class="card__principal-mobile card__princpal--preview"
+  [class]="
+    createCharacter
+      ? 'card__principal--mobile'
+      : 'card__principal--mobile-character'
+  "
   *ngIf="showValue"
 >
   <div class="etapas">
@@ -172,7 +212,7 @@
 </mat-card>
 
 <mat-accordion
-  class="card__principal-mobile card-character"
+  class="card__principal--mobile card-character"
   *ngIf="!createCharacter"
 >
   <mat-expansion-panel expanded="true" hideToggle>
@@ -195,7 +235,14 @@
 </mat-accordion>
 <!-- ************************************************ -->
 
-<mat-card class="card__principal-web" *ngIf="showValue">
+<mat-card
+  [class]="
+    !createCharacter ? 'card__principal-web' : 'card__principal-web--character'
+  "
+  *ngIf="showValue"
+>
+  TESTE
+
   <mat-grid-list cols="2">
     <mat-grid-tile>
       <div class="col-sm-6 boxEtapas">

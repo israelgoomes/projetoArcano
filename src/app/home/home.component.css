@@ -2,19 +2,34 @@
   max-width: 1024px;
   margin: auto;
   margin-bottom: 10px;
+  margin-top: 120px;
 }
 
-.card__principal-mobile {
+.card__principal--mobile {
   max-width: 1024px;
   margin: auto;
   margin-bottom: 10px;
   display: none;
+}
+.card__principal--mobile-character {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 120px;
+  display: none;
+}
+
+.card__principal-web--character {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .card__principal-web {
   max-width: 1024px;
   margin: auto;
   margin-bottom: 10px;
+  margin-top: 120px;
 }
 p {
   white-space: normal;
@@ -118,7 +133,13 @@ mat-radio-button {
   .card__principal-web {
     display: none;
   }
-  .card__principal-mobile {
+  .card__principal--mobile {
+    display: block;
+  }
+  .card__principal-web--character {
+    display: none;
+  }
+  .card__principal--mobile-character {
     display: block;
   }
 }
@@ -128,5 +149,20 @@ mat-grid-list {
 }
 
 .p-personagem {
+  text-align: left;
+}
+
+mat-slider {
+  width: 300px;
+  color: black;
+}
+.p_instavel {
+  color: red;
+}
+
+.p_nao-instavel {
+  color: white;
+}
+p {
   text-align: left;
 }

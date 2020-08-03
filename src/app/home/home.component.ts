@@ -28,8 +28,10 @@ export class HomeComponent implements OnInit {
   showValue = false;
   createCharacter = true;
   isLinear = false;
+  instavel: boolean = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  valor: any = 1;
 
   constructor(private _formBuilder: FormBuilder, private router: Router) {}
 
@@ -93,4 +95,14 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('personagem', JSON.stringify(this.arcano));
   }
   levelStep() {}
+
+  formatLabel(value: number) {
+    localStorage.setItem('salvoPontos', JSON.stringify(value));
+    return value;
+  }
+
+  formatLabelIleso(value: number) {
+    localStorage.setItem('ilesoPontos', JSON.stringify(value));
+    return value;
+  }
 }

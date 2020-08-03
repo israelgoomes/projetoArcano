@@ -14,18 +14,22 @@ export class EquipamentosComponent implements OnInit {
 
   salvar() {
     let arcano = JSON.parse(localStorage.getItem('personagem'));
-    arcano.armaReserva = '';
+    arcano.armaReserva = { arma: '', img: '' };
     switch (this.value) {
       case '1':
-        arcano.armaReserva =
+        arcano.armaReserva.arma =
           'Revólver velhor [2-dano perto, recarga barulhenta]';
+        arcano.armaReserva.img = '../../assets/img/revolver_velho.png';
         break;
       case '2':
-        arcano.armaReserva = 'Faca ritualística [1-dano contato]';
+        arcano.armaReserva.arma = 'Faca ritualística [1-dano contato]';
+        arcano.armaReserva.img = '../../assets/img/faca_rtualistica.jpg';
         break;
       case '3':
-        arcano.armaReserva = 'Espada herdada [2-dano contato brutal]';
+        arcano.armaReserva.arma = 'Espada herdada [2-dano contato brutal]';
+        arcano.armaReserva.img = '../../assets/img/espada_herdada.png';
     }
+    console.log(arcano);
     localStorage.setItem('personagem', JSON.stringify(arcano));
     this.router.navigate(['/personagem']);
   }

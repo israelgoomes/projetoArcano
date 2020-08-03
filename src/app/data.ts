@@ -18,8 +18,9 @@ export const REPUTACAO_MAGICA =
   'Reputação mágica: Escolha três grandes grupos ou organiza-ções  da  comunidade  sobrenatural,  o que  pode incluir  algunsdos tipos mais sociáveis de monstros. Eles ouviram falar vocêe respeitam seu poder. Com humanos afetados, receba +1 adi-ante para manipular alguém. Você pode usar manipular al-guém  em   monstros   afetados   como   se   eles   fossem   humanos,mas sem bônus.';
 export const VESTUARIO_ENCANTADO =
   'Vestuário encantado:  Escolha uma peça de vestuário do dia adia — ela está encantada sem nenhuma alteração na aparência.Receba 1 de dano a menos de qualquer coisa que tentar te acer-tar através da peça de roupa.';
-export const PODERIA_SER_PIOR =
-  '<p>Poderia ser pior: Quando você falhar em uma rolagempara usar magia você pode usar uma das seguintes op-ções em vez de perder o controle da magia: </p><p> • Fiasco: As preparações e materiais para o feitiço fo-ram   arruinados.   Você   terá   que   começar   do   zerocom o tempo de preparação dobrado.</p> <p>• Isso não vai ser bom: O efeito acontece, mas você aci-ona todos os defeitos listados menos um. Você es-colhe qual defeito vai evitar.</p>';
+export const PODERIA_SER_PIOR = `<Poderia ser pior: Quando você falhar em uma rolagempara usar magia você pode usar uma das seguintes op-ções em vez de perder o controle da magia: 
+   • Fiasco: As preparações e materiais para o feitiço fo-ram   arruinados.   Você   terá   que   começar   do   zerocom o tempo de preparação dobrado.
+  • Isso não vai ser bom: O efeito acontece, mas você aci-ona todos os defeitos listados menos um. Você es-colhe qual defeito vai evitar.`;
 export const ADIVINHACAO_FORENSE =
   'Adivinhação   forense:   Quando   você   investigar   ummistério  com sucesso, você pode perguntar “Que ma-gia foi feita aqui?” como uma pergunta extra e gratuita.';
 export const VA_COM_TUDO_OU_VA_PRA_CASA =

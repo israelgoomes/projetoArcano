@@ -1,0 +1,105 @@
+.card__principal {
+  max-width: 1024px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 120px;
+}
+
+mat-label {
+  font-weight: bold;
+}
+
+.redondo {
+  color: white;
+  border-radius: 100%;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  border: 1px solid transparent;
+  line-height: 50px;
+  /* float: left; */
+  text-align: center;
+}
+.redondo--color-braveza {
+  background-color: #d94e41;
+}
+.redondo--color-esperteza {
+  background-color: #395953;
+}
+
+.redondo--color-estranheza {
+  background-color: #8c856d;
+}
+
+.redondo--color-firmeza {
+  background-color: #412c38;
+}
+
+.redondo--color-sutileza {
+  background-color: #7638c2;
+}
+
+.divider {
+  width: 20%;
+  float: left;
+}
+
+.text-center {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+img {
+  width: 50px;
+}
+
+.section_movimento {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.section_combativa {
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+.section_historico {
+  border-top: 1px solid #d3d3d3;
+  /* border-bottom: 1px solid #d3d3d3; */
+}
+
+hr {
+  background-color: white;
+}
+
+.ignore {
+  color: white;
+}
+
+mat-slider {
+  width: 300px;
+  color: black;
+}
+
+.p_instavel {
+  color: red;
+}
+
+span {
+  color: #412a80;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .divider {
+    width: 33%;
+    /* float: left; */
+  }
+  .divider--ultimos {
+    width: 50%;
+    /* border-bottom: 1px solid #d3d3d3; */
+    margin-bottom: 20px;
+  }
+  mat-slider {
+    width: auto;
+    color: black;
+  }
+}

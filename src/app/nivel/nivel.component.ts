@@ -66,6 +66,7 @@ export class NivelComponent implements OnInit {
     this.validaOpcesEscolhidas();
     this.showMelhoriaAvancada = true;
     console.log('Arcano melhoria', this.arcano);
+    this.arcano.level = this.level;
     localStorage.setItem('personagem', JSON.stringify(this.arcano));
   }
 

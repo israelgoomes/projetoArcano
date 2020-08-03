@@ -1,1 +1,231 @@
-<p>personagem works!</p>
+<mat-expansion-panel expanded="true" hideToggle class="card__principal">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h2>{{ arcano.nome }}</h2>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <section>
+    <h3>Personagem:</h3>
+    <p>
+      <mat-label>
+        Gênero:
+      </mat-label>
+      {{ arcano.genero }}
+    </p>
+
+    <p>
+      <mat-label>
+        Olhos:
+      </mat-label>
+      {{ arcano.olhos }}
+    </p>
+
+    <p>
+      <mat-label>
+        Roupas:
+      </mat-label>
+      {{ arcano.roupa }}
+    </p>
+
+    <p>
+      <mat-label>
+        Level:
+      </mat-label>
+      {{ arcano.level }}
+    </p>
+
+    <p>
+      Salvo
+      <mat-slider
+        [(ngModel)]="salvoPontos"
+        disabled="true"
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1"
+        min="1"
+        max="6"
+      ></mat-slider>
+      condenado <span> ({{ salvoPontos }}) </span>
+    </p>
+
+    <p>
+      Ileso
+      <mat-slider
+        disabled="true"
+        [(ngModel)]="ilesoPontos"
+        name="teste"
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1"
+        min="1"
+        max="7"
+      ></mat-slider>
+      Morrendo <span> ({{ ilesoPontos }})</span>
+    </p>
+    <li class="p_instavel" *ngIf="ilesoPontos >= 4">
+      Instável (Lesões instáveis pioram com o tempo)
+    </li>
+
+    <h2 class="text-center">Classificações:</h2>
+
+    <div class="divider">
+      <div class="redondo redondo--color-braveza">
+        {{ arcano.braveza }}
+      </div>
+      <p class="title">Braveza</p>
+    </div>
+
+    <div class="divider">
+      <div class="redondo redondo--color-esperteza">
+        {{ arcano.esperteza }}
+      </div>
+      <p class="title">Esperteza</p>
+    </div>
+
+    <div class="divider">
+      <div class="redondo redondo--color-estranheza">
+        {{ arcano.estranheza }}
+      </div>
+      <p class="title">Estranheza</p>
+    </div>
+
+    <div class="divider divider--ultimos">
+      <div class="redondo redondo--color-firmeza">
+        {{ arcano.firmeza }}
+      </div>
+      <p class="title">Firmeza</p>
+    </div>
+
+    <div class="divider divider--ultimos">
+      <div class="redondo redondo--color-sutileza">
+        {{ arcano.sutileza }}
+      </div>
+      <p class="title">Sutileza</p>
+    </div>
+  </section>
+  <p class="ignore">ignore</p>
+
+  <section class="section_historico">
+    <h2>Histórico:</h2>
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Histórico
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Na sua vez escolha um destes para cada um dos caçadores:</p>
+        <ul>
+          <li>
+            Ele age como sua consciência quando você sente o poder subir
+            àcabeça. Pergunte a ele sobre a última vez que isto aconteceu.
+          </li>
+          <li>
+            Parentes de sangue, embora vocês não tenham tido contato porvários
+            anos. Pergunte a ele como vocês se reconectaram.
+          </li>
+          <li>
+            Mentor de uma outra vida. Pergunte a ele o que ele te ensinou.
+          </li>
+          <li>
+            Quando você o resgatou exibindo sua magia, você o introduziuao
+            sobrenatural. Diga a ele que criatura estava atrás dele.
+          </li>
+          <li>
+            Uma velha rivalidade que se tornou uma forte amizade. Diga aele o
+            que vocês disputavam.
+          </li>
+          <li>
+            Você pensou que ele estava morto, e agora ele está de volta. Oque o
+            “matou”?
+          </li>
+          <li>
+            Ele é um interesse amoroso que vai e volta. Pergunte a ele o
+            quemantém vocês separados. Diga a ele o que mantém vocês juntos.
+          </li>
+          <li>
+            Um companheiro de luta. Vocês enfrentaram as maiores amea-ças
+            juntos.
+          </li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+  <p></p>
+  <section class="section_combativa">
+    <h2>Magia Combativa:</h2>
+    <ul>
+      <li *ngFor="let magia of arcano.magiaCombativa">
+        <p>{{ magia }}</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section_movimento">
+    <h2>Movimentos:</h2>
+
+    <mat-accordion>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Movimentos Básicos
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul>
+          <li>
+            Consumíveis: Você precisa ter certos suprimentos — pós,óleos, etc. —
+            a mão para lançar seu feitiço. Eles são consu-midos quando você
+            lança o feitiço. Se você não os tiver amão, seu corpo será o
+            substituto: receba [1-dano ignora-armadura] quando lançar.
+          </li>
+          <li>
+            Focos: Você precisa de varinhas, cajados e outros imple-mentos
+            chamativos para focar seus esforços de forma maispoderosa. Se você
+            não tiver o que precisa a mão, sua magiacombativa causa −1 de dano.
+          </li>
+          <li>
+            Gestos: Você precisa ser capaz de gesticular com suas mãosde forma
+            chamativa para poder usar sua magia combativa.Se você estiver preso
+            de alguma forma você ainda conse-gue lançar o feitiço, mas as
+            chances de dar errado são mai-ores; receba −1 constante em sua magia
+            combativa.
+          </li>
+          <li>
+            Encantamentos: Você precisa falar em uma linguagem místi-ca para
+            controlar sua magia sem filtrá-la diretamente comsua mente. Se você
+            usar um feitiço de magia combativa,com sucesso ou falha, enquanto
+            não pode ou não quer fa-lar, você deve imediatamente agir sob
+            pressão para evitarembaralhar seus pensamentos — produzindo
+            alucinações,perda de sentidos e desorientação em geral.
+          </li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <ul>
+      <li *ngFor="let movimento of arcano.movimentos">
+        <p>{{ movimento }}</p>
+      </li>
+    </ul>
+  </section>
+
+  <h2>Equipamento:</h2>
+
+  <ul>
+    <li>
+      {{ arcano.armaReserva.arma }}
+      <!-- <img [src]="arcano.armaReserva.img" /> -->
+    </li>
+  </ul>
+  <mat-action-row>
+    <button
+      (click)="deletarPersonagem()"
+      color="warn"
+      class="button"
+      mat-raised-button
+    >
+      Deletar Personagem
+    </button>
+  </mat-action-row>
+</mat-expansion-panel>
