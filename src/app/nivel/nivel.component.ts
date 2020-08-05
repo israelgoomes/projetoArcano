@@ -334,7 +334,7 @@ export class NivelComponent implements OnInit {
 
   // *********************************************************************
 
-  melhoriasAvancadasClassificacao(param) {}
+  melhoriasAvancadasClassificacao(param) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

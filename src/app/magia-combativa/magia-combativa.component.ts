@@ -26,7 +26,7 @@ export class MagiaCombativaComponent implements OnInit {
     this.totalPoints += pontosExtras.magiaCombativaPontos;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   othersOptions(param) {
     if (this.explosao || this.bola || this.missil || this.muralha) {
@@ -95,7 +95,6 @@ export class MagiaCombativaComponent implements OnInit {
         'Necromântica: Adicione [drena-vida] para uma base.'
       );
     }
-
     localStorage.setItem('personagem', JSON.stringify(arcano));
     this.router.navigate(['/movimentos']);
   }

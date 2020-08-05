@@ -1,133 +1,46 @@
 .card__principal {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 120px;
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 120px;
 }
 
-p {
-  white-space: normal;
-  display: block;
-  overflow-wrap: break-word;
-  text-align: left;
-}
-
-.button {
-  float: right;
-}
-
-.redondo {
-  color: white;
-  border-radius: 100%;
-  overflow: hidden;
-  height: 50px;
-  width: 50px;
-  border: 1px solid transparent;
-  line-height: 50px;
-  float: left;
-}
-.redondo--color-braveza {
-  background-color: #d94e41;
-  color: white;
-}
-
-.redondo--color-esperteza {
-  background-color: #395953;
-  color: white;
-}
-
-.redondo--color-estranheza {
-  background-color: #8c856d;
-  color: white;
-}
-
-.redondo--color-firmeza {
-  background-color: #412c38;
-  color: white;
-}
-
-.redondo--color-sutileza {
-  background-color: #7638c2;
-  color: white;
-}
-
-.boxEtapas {
-  overflow: hidden;
-  overflow-wrap: inherit;
-  float: left;
-}
-.boxEtapas--melhorias-opcoes {
-  overflow: hidden;
-  width: 100%;
-  float: left;
-}
-
-.boxEtapas--melhorias-classidicacao {
-  overflow: hidden;
-  width: 38%;
-  float: left;
-}
-
-.etapas {
-  margin: 0 auto;
-}
-.etapas ul {
-  list-style: none;
-}
-.etapas ul,
-li {
-  margin-bottom: 15px;
-  width: 100%;
-  display: table;
-  line-height: 50px;
-}
-
-.ul_outras-opces {
-  margin-bottom: 02px;
-  padding-left: 0px;
-}
-
-.title {
-  float: left;
-  text-indent: 20px;
-}
-
-.card__princpal--preview {
-}
-
-.description {
-  float: left;
-  text-align: left;
-}
-
-mat-form-field {
-  width: 100%;
-}
-
-mat-radio-button {
-  padding: 10px;
-}
-
-.card-character {
-  width: 48%;
-  float: left;
-  height: 90%;
-}
-mat-slider {
-  width: 300px;
-  color: black;
-}
-
-.button-fab {
-  margin-right: 10px;
-  float: left;
-}
-
-@media only screen and (max-width: 600px) {
-  p {
+.p {
     white-space: normal;
     display: block;
     overflow-wrap: break-word;
-    text-align: center;
+    text-align: left;
+}
+
+/* .etapas {
+    margin: 0 auto;
+} */
+ .list {
+    list-style: none;
+}
+ .list,
+.lit__item {
+    margin-bottom: 15px;
+    width: 100%;
+    display: table;
+    line-height: 50px;
+}
+
+.list {
+    margin-bottom: 02px;
+    padding-left: 0px;
+}
+
+.div--title {
+    float: left;
+    text-indent: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .p {
+      white-space: normal;
+      display: block;
+      overflow-wrap: break-word;
+      text-align: center;
   }
 }

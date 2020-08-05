@@ -11,7 +11,7 @@ export class PersonagemComponent implements OnInit {
   arcano;
   ilesoPontos: number;
   salvoPontos: number;
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.arcano = JSON.parse(localStorage.getItem('personagem'));

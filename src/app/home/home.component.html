@@ -1,61 +1,41 @@
-<mat-card class="card__principal" *ngIf="createCharacter">
+<!-- Card Principal para todos dispositivos -->
+<mat-card class="card-principal" *ngIf="createCharacter">
   <mat-horizontal-stepper [linear]="!arcano.nome" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form>
         <ng-template matStepLabel></ng-template>
-        <mat-form-field>
+        <mat-form-field class="card-principal__form">
           <mat-label>Nome</mat-label>
-          <input
-            [(ngModel)]="arcano.nome"
-            matInput
-            placeholder="Nome"
-            name="nome"
-            required
-          />
+          <input [(ngModel)]="arcano.nome" matInput placeholder="Nome" name="nome" required />
         </mat-form-field>
 
-        <p>
+        <p class="p p--aviso">
           Marque uma caixa de Sorte para alterar uma rolagem para 12 ou evitar
           todo o dano de um ferimento.
         </p>
-        <p>
+        <p class="p p--slider">
           Salvo
-          <mat-slider
-            thumbLabel
-            [displayWith]="formatLabel"
-            tickInterval="1"
-            min="1"
-            max="6"
-          ></mat-slider>
+          <mat-slider class="slider__salvo-ileso" thumbLabel [displayWith]="formatLabel" tickInterval="1" min="1"
+            max="6"></mat-slider>
           condenado
         </p>
 
-        <p>Quando você chegar em 4 ou mais, marque ‘Instável’.</p>
-        <p>
+        <p class="p p--aviso">
+          Quando você chegar em 4 ou mais, marque ‘Instável’.
+        </p>
+        <p class="p p--slider">
           Ileso
-          <mat-slider
-            [(ngModel)]="valor"
-            name="slide"
-            thumbLabel
-            [displayWith]="formatLabelIleso"
-            tickInterval="1"
-            min="1"
-            max="7"
-          ></mat-slider>
+          <mat-slider class="slider__salvo-ileso" [(ngModel)]="valor" name="slide" thumbLabel
+            [displayWith]="formatLabelIleso" tickInterval="1" min="1" max="7"></mat-slider>
           Morrendo
         </p>
-        <p class="p_nao-instavel" *ngIf="valor <= 4">Não instável</p>
-        <p class="p_instavel" *ngIf="valor >= 4">
+        <p class="p p--nao-instavel" *ngIf="valor <= 4">Não instável</p>
+        <p class="p p--instavel" *ngIf="valor >= 4">
           Instável(Lesões instáveis pioram com o tempo)
         </p>
 
         <div>
-          <button
-            [disabled]="!arcano.nome"
-            class="button"
-            mat-raised-button
-            matStepperNext
-          >
+          <button [disabled]="!arcano.nome" class="button" mat-raised-button matStepperNext>
             Próximo
           </button>
         </div>
@@ -64,7 +44,7 @@
     <mat-step [stepControl]="firstFormGroup">
       <form>
         <ng-template [disabled]="!arcano.nome" matStepLabel></ng-template>
-        <mat-form-field appearance="fill">
+        <mat-form-field class="card-principal__form" appearance="fill">
           <mat-label>Gênero</mat-label>
           <mat-select [(ngModel)]="arcano.genero" name="select">
             <mat-option *ngFor="let genero of generos" [value]="genero">
@@ -73,7 +53,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field class="card-principal__form" appearance="fill">
           <mat-label>Roupas</mat-label>
           <mat-select [(ngModel)]="arcano.roupa" name="select">
             <mat-option *ngFor="let roupa of roupas" [value]="roupa">
@@ -82,7 +62,7 @@
           </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field class="card-principal__form" appearance="fill">
           <mat-label>Olhos</mat-label>
           <mat-select [(ngModel)]="arcano.olhos" name="select">
             <mat-option *ngFor="let olho of olhos" [value]="olho">
@@ -91,12 +71,8 @@
           </mat-select>
         </mat-form-field>
         <div>
-          <button
-            [disabled]="!arcano.genero || !arcano.olhos || !arcano.roupa"
-            class="button"
-            mat-raised-button
-            matStepperNext
-          >
+          <button [disabled]="!arcano.genero || !arcano.olhos || !arcano.roupa" class="button" mat-raised-button
+            matStepperNext>
             Próximo
           </button>
           <button class="button" mat-raised-button matStepperPrevious>
@@ -108,36 +84,32 @@
 
     <mat-step [stepControl]="firstFormGroup">
       <ng-template></ng-template>
-      <mat-radio-group
-        aria-label="Select an option"
-        [(ngModel)]="value"
-        (change)="adicionaValores()"
-      >
-        <mat-radio-button value="1"
-          ><p>
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="value" (change)="adicionaValores()">
+        <mat-radio-button class="radio-button" value="1">
+          <p class="p">
             Braveza ±0, Esperteza +1, Estranheza +2, Firmeza +1, Sutileza −1
-          </p></mat-radio-button
-        >
-        <mat-radio-button value="2">
-          <p>
+          </p>
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="2">
+          <p class="p">
             Braveza +1, Esperteza +1, Estranheza +2, Firmeza −1, Sutileza ±0
           </p>
         </mat-radio-button>
-        <mat-radio-button value="3"
-          ><p>
+        <mat-radio-button class="radio-button" value="3">
+          <p class="p">
             Braveza −1, Esperteza +2, Estranheza +2, Firmeza ±0, Sutileza −1
-          </p></mat-radio-button
-        >
-        <mat-radio-button value="4"
-          ><p>
+          </p>
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="4">
+          <p class="p">
             Braveza −1, Esperteza +1, Estranheza +2, Firmeza ±0, Sutileza +1
-          </p></mat-radio-button
-        >
-        <mat-radio-button value="5"
-          ><p>
+          </p>
+        </mat-radio-button>
+        <mat-radio-button class="radio-button" value="5">
+          <p class="p">
             Braveza ±0, Esperteza +1, Estranheza +2, Firmeza ±0, Sutileza ±0
-          </p></mat-radio-button
-        >
+          </p>
+        </mat-radio-button>
       </mat-radio-group>
 
       <div>
@@ -151,58 +123,42 @@
     </mat-step>
   </mat-horizontal-stepper>
 </mat-card>
+<!-- Fim Card Principal para todos dispositivos -->
 
-<!-- ************************************************ -->
-<mat-card
-  [class]="
+<!-- ****** Card para mobile***** -->
+<mat-card [class]="
     createCharacter
-      ? 'card__principal--mobile'
-      : 'card__principal--mobile-character'
-  "
-  *ngIf="showValue"
->
-  <div class="etapas">
-    <ul>
-      <li>
-        <!-- <div class="description">
-            <p>Partir para porrada</p>
-            <p>Proteger alguém</p>
-          </div> -->
-        <div class="redondo redondo--color-braveza">{{ arcano.braveza }}</div>
+      ? 'card-principal--mobile'
+      : 'card-principal--mobile-personagem'
+  " *ngIf="showValue">
+  <div class="div">
+    <ul class="div__list">
+      <li class="div__list--item">
+        <div class="div--redondo div--redondo--color-braveza">
+          {{ arcano.braveza }}
+        </div>
         <div class="title">Braveza</div>
       </li>
-      <li>
-        <!-- <div class="description">
-            <p>Investigar um mistério</p>
-            <p>Perceber uma enrascada</p>
-          </div> -->
-        <div class="redondo redondo--color-esperteza">
+      <li class="div__list--item">
+        <div class="div--redondo div--redondo--color-esperteza">
           {{ arcano.esperteza }}
         </div>
         <div class="title">Esperteza</div>
       </li>
-      <li>
-        <!-- <div class="description">
-            <p>Usar magia</p>
-          </div> -->
-        <div class="redondo redondo--color-estranheza">
+      <li class="div__list--item">
+        <div class="div--redondo div--redondo--color-estranheza">
           {{ arcano.estranheza }}
         </div>
         <div class="title">Estranheza</div>
       </li>
-      <li>
-        <!-- <div class="description">
-            <p>Agir sobre pressão</p>
-            <p>Dar uma mão</p>
-          </div> -->
-        <div class="redondo redondo--color-firmeza">{{ arcano.firmeza }}</div>
+      <li class="div__list--item">
+        <div class="div--redondo div--redondo--color-firmeza">
+          {{ arcano.firmeza }}
+        </div>
         <div class="title">Firmeza</div>
       </li>
-      <li>
-        <!-- <div class="description">
-            <p>Manipular alguém</p>
-          </div> -->
-        <div class="redondo redondo--color-sutileza">
+      <li class="div__list--item">
+        <div class="div--redondo div--redondo--color-sutileza">
           {{ arcano.sutileza }}
         </div>
         <div class="title">Sutileza</div>
@@ -211,20 +167,20 @@
   </div>
 </mat-card>
 
-<mat-accordion
-  class="card__principal--mobile card-character"
-  *ngIf="!createCharacter"
->
+<!-- Fim card mobile -->
+
+<!-- Card Com o personagem -->
+<mat-accordion class="card-principal--mobile card-personagem" *ngIf="!createCharacter">
   <mat-expansion-panel expanded="true" hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title>
         Caçador Arcano
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p class="p-personagem">Nome: {{ arcano.nome }}</p>
-    <p class="p-personagem">Gênero: {{ arcano.genero }}</p>
-    <p class="p-personagem">Olhos: {{ arcano.olhos }}</p>
-    <p class="p-personagem">Roupas: {{ arcano.roupa }}</p>
+    <p class="p p--personagem">Nome: {{ arcano.nome }}</p>
+    <p class="p p--personagem">Gênero: {{ arcano.genero }}</p>
+    <p class="p p--personagem">Olhos: {{ arcano.olhos }}</p>
+    <p class="p p--personagem">Roupas: {{ arcano.roupa }}</p>
 
     <mat-action-row>
       <button class="button" mat-raised-button routerLink="/nivel">
@@ -233,63 +189,43 @@
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>
-<!-- ************************************************ -->
+<!-- *** FIM Card com o personagem*** -->
 
-<mat-card
-  [class]="
-    !createCharacter ? 'card__principal-web' : 'card__principal-web--character'
-  "
-  *ngIf="showValue"
->
-  <mat-grid-list cols="2">
+<!-- Card das classificações dos personagens -->
+<mat-card [class]="
+    !createCharacter ? 'card-principal--web' : 'card-principal--web-personagem'
+  " *ngIf="showValue">
+  <mat-grid-list class="grid-list" cols="2">
     <mat-grid-tile>
       <div class="col-sm-6 boxEtapas">
-        <div class="etapas">
-          <ul>
-            <li>
-              <!-- <div class="description">
-                <p>Partir para porrada</p>
-                <p>Proteger alguém</p>
-              </div> -->
-              <div class="redondo redondo--color-braveza">
+        <div class="div">
+          <ul class="div__list">
+            <li class="div__list--item">
+              <div class="div--redondo div--redondo--color-braveza">
                 {{ arcano.braveza }}
               </div>
               <div class="title">Braveza</div>
             </li>
-            <li>
-              <!-- <div class="description">
-                <p>Investigar um mistério</p>
-                <p>Perceber uma enrascada</p>
-              </div> -->
-              <div class="redondo redondo--color-esperteza">
+            <li class="div__list--item">
+              <div class="div--redondo div--redondo--color-esperteza">
                 {{ arcano.esperteza }}
               </div>
               <div class="title">Esperteza</div>
             </li>
-            <li>
-              <!-- <div class="description">
-                <p>Usar magia</p>
-              </div> -->
-              <div class="redondo redondo--color-estranheza">
+            <li class="div__list--item">
+              <div class="div--redondo div--redondo--color-estranheza">
                 {{ arcano.estranheza }}
               </div>
               <div class="title">Estranheza</div>
             </li>
-            <li>
-              <!-- <div class="description">
-                <p>Agir sobre pressão</p>
-                <p>Dar uma mão</p>
-              </div> -->
-              <div class="redondo redondo--color-firmeza">
+            <li class="div__list--item">
+              <div class="div--redondo div--redondo--color-firmeza">
                 {{ arcano.firmeza }}
               </div>
               <div class="title">Firmeza</div>
             </li>
-            <li>
-              <!-- <div class="description">
-                <p>Manipular alguém</p>
-              </div> -->
-              <div class="redondo redondo--color-sutileza">
+            <li class="div__list--item">
+              <div class="div--redondo div--redondo--color-sutileza">
                 {{ arcano.sutileza }}
               </div>
               <div class="title">Sutileza</div>
@@ -299,14 +235,14 @@
       </div>
     </mat-grid-tile>
     <mat-grid-tile>
-      <mat-card class="card-character-web" *ngIf="!createCharacter">
+      <mat-card class="card-personagem-web" *ngIf="!createCharacter">
         <mat-card-title> Caçador Arcano </mat-card-title>
         <hr />
         <mat-card-content>
-          <p class="p-personagem">Nome: {{ arcano.nome }}</p>
-          <p class="p-personagem">Gênero: {{ arcano.genero }}</p>
-          <p class="p-personagem">Olhos: {{ arcano.olhos }}</p>
-          <p class="p-personagem">Roupas: {{ arcano.roupa }}</p>
+          <p class="p p--personagem">Nome: {{ arcano.nome }}</p>
+          <p class="p p--personagem">Gênero: {{ arcano.genero }}</p>
+          <p class="p p--personagem">Olhos: {{ arcano.olhos }}</p>
+          <p class="p p--personagem">Roupas: {{ arcano.roupa }}</p>
         </mat-card-content>
         <button class="button" mat-raised-button routerLink="/nivel">
           Continuar

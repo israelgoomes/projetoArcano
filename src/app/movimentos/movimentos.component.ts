@@ -39,7 +39,7 @@ export class MovimentosComponent implements OnInit {
     this.totalPoints += pontosExtras.movArcanoPontos;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   othersOptions(param) {
     if (param == true) {

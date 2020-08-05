@@ -4,154 +4,121 @@
       Pontos
     </mat-panel-title>
   </mat-expansion-panel-header>
-  <p>Escolha até {{ totalPoints }} opções, sendo obrigatório uma Base:</p>
+  <p class="p">Escolha até {{ totalPoints }} opções, sendo obrigatório uma Base:</p>
 
-  <ul class="ul_outras-opces">
+  <ul class="list">
     <h2>Bases</h2>
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          [disabled]="!totalPoints && !explosao"
-          (change)="othersOptions(explosao)"
-          [(ngModel)]="explosao"
-        >
-          <p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" [disabled]="!totalPoints && !explosao" (change)="othersOptions(explosao)"
+          [(ngModel)]="explosao">
+          <p class="p">
             Explosão [2-dano perto mágica chamativa barulhenta]
           </p>
         </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          (change)="othersOptions(bola)"
-          [disabled]="!totalPoints && !bola"
-          [(ngModel)]="bola"
-        >
-          <p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" (change)="othersOptions(bola)" [disabled]="!totalPoints && !bola"
+          [(ngModel)]="bola">
+          <p class="p">
             Bola [1-dano perto área mágica chamativa barulhenta]
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          (change)="othersOptions(missil)"
-          [disabled]="!totalPoints && !missil"
-          [(ngModel)]="missil"
-        >
-          <p>Míssil [1-dano longe mágica chamativa barulhenta]</p></mat-checkbox
-        >
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" (change)="othersOptions(missil)" [disabled]="!totalPoints && !missil"
+          [(ngModel)]="missil">
+          <p class="p">Míssil [1-dano longe mágica chamativa barulhenta]</p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          (change)="othersOptions(muralha)"
-          [disabled]="!totalPoints && !muralha"
-          [(ngModel)]="muralha"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" (change)="othersOptions(muralha)" [disabled]="!totalPoints && !muralha"
+          [(ngModel)]="muralha">
+          <p class="p">
             Muralha [1-dano perto barreira 1-armadura mágicachamativa
             barulhenta]
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
     <h2>Efeitos</h2>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="(!totalPoints && !fogo) || !habilitaEfeitos"
-          (change)="othersOptions(fogo)"
-          class="example-margin"
-          [(ngModel)]="fogo"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="(!totalPoints && !fogo) || !habilitaEfeitos" (change)="othersOptions(fogo)"
+          class="example-margin" [(ngModel)]="fogo">
+          <p class="p">
             Fogo: Adicione +2 de dano e [fogo] para uma base. Com10+ em uma
             rolagem de magia combativa, o fogo nãovia se espalhar.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="(!totalPoints && !forca) || !habilitaEfeitos"
-          (change)="othersOptions(forca)"
-          class="example-margin"
-          [(ngModel)]="forca"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="(!totalPoints && !forca) || !habilitaEfeitos" (change)="othersOptions(forca)"
+          class="example-margin" [(ngModel)]="forca">
+          <p class="p">
             Força ou Vento: Adicione +1 de dano e [empurrão] parauma base; ou +1
             de armadura para uma muralha.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="(!totalPoints && !raioOuEntropia) || !habilitaEfeitos"
-          (change)="othersOptions(raioOuEntropia)"
-          class="example-margin"
-          [(ngModel)]="raioOuEntropia"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="(!totalPoints && !raioOuEntropia) || !habilitaEfeitos"
+          (change)="othersOptions(raioOuEntropia)" class="example-margin" [(ngModel)]="raioOuEntropia">
+          <p class="p">
             Raio ou Entropia: Adicione +1 de dano e [brutal] parauma base.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="(!totalPoints && !frioOuGelo) || !habilitaEfeitos"
-          (change)="othersOptions(frioOuGelo)"
-          class="example-margin"
-          [(ngModel)]="frioOuGelo"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="(!totalPoints && !frioOuGelo) || !habilitaEfeitos"
+          (change)="othersOptions(frioOuGelo)" class="example-margin" [(ngModel)]="frioOuGelo">
+          <p class="p">
             Frio ou Gelo: Adicione −1 de dano e +2 de armadurapara uma muralha;
             ou +1 de dano e [restritiva] para outras bases.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="(!totalPoints && !terra) || !habilitaEfeitos"
-          (change)="othersOptions(terra)"
-          class="example-margin"
-          [(ngModel)]="terra"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="(!totalPoints && !terra) || !habilitaEfeitos" (change)="othersOptions(terra)"
+          class="example-margin" [(ngModel)]="terra">
+          <p class="p">
             Terra: Adicione [empurrão restritiva] para uma base.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="(!totalPoints && !neocromantica) || !habilitaEfeitos"
-          (change)="othersOptions(neocromantica)"
-          class="example-margin"
-          [(ngModel)]="neocromantica"
-          ><p>
+    <li class="lit__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="(!totalPoints && !neocromantica) || !habilitaEfeitos"
+          (change)="othersOptions(neocromantica)" class="example-margin" [(ngModel)]="neocromantica">
+          <p class="p">
             Necromântica: Adicione [drena-vida] para uma base.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
   </ul>

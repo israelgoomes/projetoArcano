@@ -1,170 +1,163 @@
 .card__principal {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .card__principal--nivel {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 120px !important;
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 120px !important;
 }
 
-p {
-  white-space: normal;
-  display: block;
-  overflow-wrap: break-word;
-  text-align: left;
+.p {
+    white-space: normal;
+    display: block;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+.p--instrucao{
+    font-weight: bold;
 }
 
-.button {
-  float: right;
+.div--redondo {
+    color: white;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    line-height: 50px;
+    float: left;
+}
+.div--redondo--color-braveza {
+    background-color: #d94e41;
+    color: white;
 }
 
-.redondo {
-  color: white;
-  border-radius: 100%;
-  overflow: hidden;
-  height: 50px;
-  width: 50px;
-  border: 1px solid transparent;
-  line-height: 50px;
-  float: left;
-}
-.redondo--color-braveza {
-  background-color: #d94e41;
-  color: white;
+.div--redondo--color-esperteza {
+    background-color: #395953;
+    color: white;
 }
 
-.redondo--color-esperteza {
-  background-color: #395953;
-  color: white;
+.div--redondo--color-estranheza {
+    background-color: #8c856d;
+    color: white;
 }
 
-.redondo--color-estranheza {
-  background-color: #8c856d;
-  color: white;
+.div--redondo--color-firmeza {
+    background-color: #412c38;
+    color: white;
 }
 
-.redondo--color-firmeza {
-  background-color: #412c38;
-  color: white;
-}
-
-.redondo--color-sutileza {
-  background-color: #7638c2;
-  color: white;
+.div--redondo--color-sutileza {
+    background-color: #7638c2;
+    color: white;
 }
 
 .boxEtapas {
-  overflow: hidden;
-  width: 48%;
-  float: left;
+    overflow: hidden;
+    width: 48%;
+    float: left;
 }
 .boxEtapas--melhorias-opcoes {
-  overflow: hidden;
-  width: 60%;
-  float: left;
+    overflow: hidden;
+    width: 60%;
+    float: left;
 }
 
 .boxEtapas--melhorias-classidicacao {
-  overflow: hidden;
-  width: 38%;
-  float: left;
+    overflow: hidden;
+    width: 38%;
+    float: left;
 }
 
-.outras-opcoes {
-  overflow: hidden;
-  width: 48%;
-  float: left;
+.div__outras-opcoes {
+    overflow: hidden;
+    width: 48%;
+    float: left;
 }
 
-.etapas {
-  margin: 0 auto;
-  padding-left: 0px;
+.div {
+    margin: 0 auto;
+    padding-left: 0px;
 }
-.etapas ul {
-  list-style: none;
+.div .div__list {
+    list-style: none;
 }
-.etapas ul,
-li {
-  margin-bottom: 15px;
-  width: 100%;
-  display: table;
-  line-height: 50px;
-  padding-left: 0px;
-}
-
-.ul_outras-opces {
-  margin-bottom: 02px;
-  padding-left: 0px;
+.div .div__list ,
+.div__list--item  {
+    margin-bottom: 15px;
+    width: 100%;
+    display: table;
+    line-height: 50px;
+    padding-left: 0px;
 }
 
-.title {
-  float: left;
-  text-indent: 20px;
+.list__outras-opces {
+    margin-bottom: 02px;
+    padding-left: 0px;
+    list-style: none;
+  
+}
+
+.div--title {
+    float: left;
+    text-indent: 20px;
 }
 
 .card__princpal--preview {
-  height: 100%;
+    height: 100%;
 }
 
 .description {
-  float: left;
-  text-align: left;
-}
-
-mat-form-field {
-  width: 100%;
-}
-
-mat-radio-button {
-  padding: 10px;
+    float: left;
+    text-align: left;
 }
 
 .card-character {
-  width: 48%;
-  float: left;
-  height: 90%;
+    width: 48%;
+    float: left;
+    height: 90%;
 }
-mat-slider {
-  width: 300px;
-  color: black;
+.slider {
+    width: 300px;
+    color: black;
 }
 
 .button-fab {
-  margin-right: 10px;
-  float: left;
+    margin-right: 10px;
+    float: left;
 }
 
 @media only screen and (max-width: 600px) {
   .boxEtapas {
-    overflow: hidden;
-    width: 100%;
-    float: left;
+      overflow: hidden;
+      width: 100%;
+      float: left;
   }
   .boxEtapas--melhorias-opcoes {
-    overflow: hidden;
-    width: 100%;
-    float: left;
+      overflow: hidden;
+      width: 100%;
+      float: left;
   }
 
   .boxEtapas--melhorias-classidicacao {
-    overflow: hidden;
-    width: 100%;
-    float: left;
+      overflow: hidden;
+      width: 100%;
+      float: left;
   }
 
-  p {
-    white-space: normal;
-    display: block;
-    text-align: center;
-    word-wrap: break-word;
+  .p {
+      white-space: normal;
+      display: block;
+      text-align: center;
+      word-wrap: break-word;
   }
-  .outras-opcoes {
-    overflow: hidden;
-    width: 100%;
-    float: left;
+  .div__outras-opcoes {
+      overflow: hidden;
+      width: 100%;
+      float: left;
   }
 }

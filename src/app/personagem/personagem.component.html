@@ -1,4 +1,4 @@
-<mat-expansion-panel expanded="true" hideToggle class="card__principal">
+<mat-expansion-panel expanded="true" hideToggle class="card-principal">
   <mat-expansion-panel-header>
     <mat-panel-title>
       <h2>{{ arcano.nome }}</h2>
@@ -8,7 +8,7 @@
   <section>
     <h3>Personagem:</h3>
     <p>
-      <mat-label>
+      <mat-label class="label">
         Gênero:
       </mat-label>
       {{ arcano.genero }}
@@ -37,31 +37,16 @@
 
     <p>
       Salvo
-      <mat-slider
-        [(ngModel)]="salvoPontos"
-        disabled="true"
-        thumbLabel
-        [displayWith]="formatLabel"
-        tickInterval="1"
-        min="1"
-        max="6"
-      ></mat-slider>
-      condenado <span> ({{ salvoPontos }}) </span>
+      <mat-slider class="slider" [(ngModel)]="salvoPontos" disabled="true" thumbLabel [displayWith]="formatLabel"
+        tickInterval="1" min="1" max="6"></mat-slider>
+      condenado <span class="span"> ({{ salvoPontos }}) </span>
     </p>
 
     <p>
       Ileso
-      <mat-slider
-        disabled="true"
-        [(ngModel)]="ilesoPontos"
-        name="teste"
-        thumbLabel
-        [displayWith]="formatLabel"
-        tickInterval="1"
-        min="1"
-        max="7"
-      ></mat-slider>
-      Morrendo <span> ({{ ilesoPontos }})</span>
+      <mat-slider class="slider" disabled="true" [(ngModel)]="ilesoPontos" name="teste" thumbLabel
+        [displayWith]="formatLabel" tickInterval="1" min="1" max="7"></mat-slider>
+      Morrendo <span class="span"> ({{ ilesoPontos }})</span>
     </p>
     <li class="p_instavel" *ngIf="ilesoPontos >= 4">
       Instável (Lesões instáveis pioram com o tempo)
@@ -69,36 +54,36 @@
 
     <h2 class="text-center">Classificações:</h2>
 
-    <div class="divider">
-      <div class="redondo redondo--color-braveza">
+    <div class="div--divisor">
+      <div class="div--redondo div--redondo--color-braveza">
         {{ arcano.braveza }}
       </div>
       <p class="title">Braveza</p>
     </div>
 
-    <div class="divider">
-      <div class="redondo redondo--color-esperteza">
+    <div class="div--divisor">
+      <div class="div--redondo div--redondo--color-esperteza">
         {{ arcano.esperteza }}
       </div>
       <p class="title">Esperteza</p>
     </div>
 
-    <div class="divider">
-      <div class="redondo redondo--color-estranheza">
+    <div class="div--divisor">
+      <div class="div--redondo div--redondo--color-estranheza">
         {{ arcano.estranheza }}
       </div>
       <p class="title">Estranheza</p>
     </div>
 
-    <div class="divider divider--ultimos">
-      <div class="redondo redondo--color-firmeza">
+    <div class="div--divisor div--divisor--ultimos">
+      <div class="div--redondo div--redondo--color-firmeza">
         {{ arcano.firmeza }}
       </div>
       <p class="title">Firmeza</p>
     </div>
 
-    <div class="divider divider--ultimos">
-      <div class="redondo redondo--color-sutileza">
+    <div class="div--divisor div--divisor--ultimos">
+      <div class="div--redondo div--redondo--color-sutileza">
         {{ arcano.sutileza }}
       </div>
       <p class="title">Sutileza</p>
@@ -106,7 +91,7 @@
   </section>
   <p class="ignore">ignore</p>
 
-  <section class="section_historico">
+  <section class="section--historico">
     <h2>Histórico:</h2>
     <mat-accordion>
       <mat-expansion-panel hideToggle>
@@ -153,7 +138,7 @@
     </mat-accordion>
   </section>
   <p></p>
-  <section class="section_combativa">
+  <section class="section--combativa">
     <h2>Magia Combativa:</h2>
     <ul>
       <li *ngFor="let magia of arcano.magiaCombativa">
@@ -162,7 +147,7 @@
     </ul>
   </section>
 
-  <section class="section_movimento">
+  <section class="section--movimento">
     <h2>Movimentos:</h2>
 
     <mat-accordion>
@@ -219,12 +204,7 @@
     </li>
   </ul>
   <mat-action-row>
-    <button
-      (click)="deletarPersonagem()"
-      color="warn"
-      class="button"
-      mat-raised-button
-    >
+    <button (click)="deletarPersonagem()" color="warn" class="button" mat-raised-button>
       Deletar Personagem
     </button>
   </mat-action-row>

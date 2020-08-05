@@ -1,516 +1,362 @@
 <mat-accordion>
-  <mat-expansion-panel
-    expanded="true"
-    hideToggle
-    class="card__principal--nivel"
-  >
+
+  <!-- Escolha de level -->
+  <mat-expansion-panel expanded="true" hideToggle class="card__principal--nivel">
     <mat-expansion-panel-header>
       <mat-panel-title>
         <mat-label>Level</mat-label>
-        <!-- <mat-icon>send</mat-icon> -->
       </mat-panel-title>
     </mat-expansion-panel-header>
 
     <h2>Escolha seu nível</h2>
-    <mat-slider
-      [disabled]="showPoints"
-      thumbLabel
-      [displayWith]="formatLabel"
-      tickInterval="1"
-      min="1"
-      max="20"
-    ></mat-slider>
-    <p *ngIf="level">Nível: {{ level }}</p>
+    <mat-slider class="slider" [disabled]="showPoints" thumbLabel [displayWith]="formatLabel" tickInterval="1" min="1"
+      max="10">
+    </mat-slider>
+    <p class="p" *ngIf="level">Nível: {{ level }}</p>
 
     <mat-action-row>
       <button mat-button color="primary" (click)="nextStep()">OK</button>
     </mat-action-row>
   </mat-expansion-panel>
+  <!-- FIM Escolha de level -->
 
-  <mat-expansion-panel
-    *ngIf="showPoints"
-    expanded="true"
-    class="card__principal"
-    (opened)="panelOpenState = true"
-    (closed)="panelOpenState = false"
-  >
+
+  <!-- Distribuição de pontos -->
+  <mat-expansion-panel *ngIf="showPoints" expanded="true" class="card__principal" (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Pontos
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>Você tem {{ totalPoints }} ponto(s) para gastar, escolha como:</p>
+
+    <p class="p">Você tem {{ totalPoints }} ponto(s) para gastar, escolha como:</p>
+
+    <p class="p p--instrucao">* Escolha no máximo 2 opções de Braveza, Esperteza ou Firmeza e 3 de Estranheza</p>
 
     <div class="col-sm-6 boxEtapas" align="center">
-      <div class="etapas">
-        <ul>
-          <li>
-            <button
-              (click)="diminuiValor('braveza')"
-              class="button-fab redondo--color-braveza"
-              mat-mini-fab
-              color=""
-              aria-label="Example icon button with a menu icon"
-            >
+      <div class="div">
+        <ul class="div__list">
+          <li class="div__list--item">
+            <button (click)="diminuiValor('braveza')" class="button-fab div--redondo--color-braveza" mat-mini-fab
+              color="" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValor('braveza')"
-              class="button-fab redondo--color-braveza"
-              mat-mini-fab
-              color=""
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValor('braveza')" class="button-fab div--redondo--color-braveza" mat-mini-fab
+              color="" aria-label="Example icon button with a menu icon">
               +
             </button>
 
-            <div class="redondo redondo--color-braveza">
+            <div class="div--redondo div--redondo--color-braveza">
               {{ arcano.braveza }}
             </div>
-            <div class="title">braveza</div>
+            <div class="div--title">braveza</div>
           </li>
-          <li>
-            <button
-              (click)="diminuiValor('esperteza')"
-              class="button-fab redondo--color-esperteza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValor('esperteza')" class="button-fab div--redondo--color-esperteza" mat-mini-fab
+              color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValor('esperteza')"
-              class="button-fab redondo--color-esperteza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValor('esperteza')" class="button-fab div--redondo--color-esperteza" mat-mini-fab
+              color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-esperteza">
+            <div class="div--redondo div--redondo--color-esperteza">
               {{ arcano.esperteza }}
             </div>
-            <div class="title">Esperteza</div>
+            <div class="div--title">Esperteza</div>
           </li>
-          <li>
-            <button
-              (click)="diminuiValor('estranheza')"
-              class="button-fab redondo--color-estranheza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValor('estranheza')" class="button-fab div--redondo--color-estranheza" mat-mini-fab
+              color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValor('estranheza')"
-              class="button-fab redondo--color-estranheza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValor('estranheza')" class="button-fab div--redondo--color-estranheza" mat-mini-fab
+              color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-estranheza">
+            <div class="div--redondo div--redondo--color-estranheza">
               {{ arcano.estranheza }}
             </div>
-            <div class="title">Estranheza</div>
+            <div class="div--title">Estranheza</div>
           </li>
-          <li>
-            <button
-              (click)="diminuiValor('firmeza')"
-              class="button-fab redondo--color-firmeza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValor('firmeza')" class="button-fab div--redondo--color-firmeza" mat-mini-fab
+              color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValor('firmeza')"
-              class="button-fab redondo--color-firmeza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValor('firmeza')" class="button-fab div--redondo--color-firmeza" mat-mini-fab
+              color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-firmeza">
+            <div class="div--redondo div--redondo--color-firmeza">
               {{ arcano.firmeza }}
             </div>
-            <div class="title">Firmeza</div>
+            <div class="div--title">Firmeza</div>
           </li>
         </ul>
       </div>
     </div>
 
     <!-- Outras opções -->
-    <div class="outras-opcoes">
-      <ul class="ul_outras-opces">
-        <li class="ul_outras-opces">
-          <div class="title">
-            <mat-checkbox
-              class="example-margin"
-              [disabled]="!totalPoints && !movArcano1"
-              (change)="othersOptions(movArcano1)"
-              [(ngModel)]="movArcano1"
-            >
-              <p>Pegue outro movimento de arcano</p></mat-checkbox
-            >
+    <div class="div__outras-opcoes">
+      <ul class="list__outras-opces">
+        <li class="lis__outras-opces--item">
+          <div class="div--title">
+            <mat-checkbox class="example-margin" [disabled]="!totalPoints && !movArcano1"
+              (change)="othersOptions(movArcano1)" [(ngModel)]="movArcano1">
+              <p class="p">Pegue outro movimento de arcano</p>
+            </mat-checkbox>
           </div>
         </li>
 
         <li class="ul_outras-opces">
-          <div class="title">
-            <mat-checkbox
-              class="example-margin"
-              (change)="othersOptions(movArcano2)"
-              [disabled]="!totalPoints && !movArcano2"
-              [(ngModel)]="movArcano2"
-              ><p>Pegue outro movimento de arcano</p></mat-checkbox
-            >
+          <div class="div--title">
+            <mat-checkbox class="example-margin" (change)="othersOptions(movArcano2)"
+              [disabled]="!totalPoints && !movArcano2" [(ngModel)]="movArcano2">
+              <p class="p">Pegue outro movimento de arcano</p>
+            </mat-checkbox>
           </div>
         </li>
 
         <li class="ul_outras-opces">
-          <div class="title">
-            <mat-checkbox
-              class="example-margin && !movCartilha1"
-              (change)="othersOptions(movCartilha1)"
-              [disabled]="!totalPoints && !movCartilha1"
-              [(ngModel)]="movCartilha1"
-              ><p>Pegue um movimento de outra cartilha</p></mat-checkbox
-            >
+          <div class="div--title">
+            <mat-checkbox class="example-margin && !movCartilha1" (change)="othersOptions(movCartilha1)"
+              [disabled]="!totalPoints && !movCartilha1" [(ngModel)]="movCartilha1">
+              <p class="p">Pegue um movimento de outra cartilha</p>
+            </mat-checkbox>
           </div>
         </li>
 
         <li class="ul_outras-opces">
-          <div class="title">
-            <mat-checkbox
-              class="example-margin"
-              (change)="othersOptions(movCartilha2)"
-              [disabled]="!totalPoints && !movCartilha2"
-              [(ngModel)]="movCartilha2"
-              ><p>Pegue um movimento de outra cartilha</p></mat-checkbox
-            >
+          <div class="div--title">
+            <mat-checkbox class="example-margin" (change)="othersOptions(movCartilha2)"
+              [disabled]="!totalPoints && !movCartilha2" [(ngModel)]="movCartilha2">
+              <p class="p">Pegue um movimento de outra cartilha</p>
+            </mat-checkbox>
           </div>
         </li>
 
         <li class="ul_outras-opces">
-          <div class="title">
-            <mat-checkbox
-              [disabled]="!totalPoints && !magiaCombativa"
-              (change)="othersOptions(magiaCombativa)"
-              class="example-margin"
-              [(ngModel)]="magiaCombativa"
-              ><p>Pegue outra escolha de Magia Combativa</p></mat-checkbox
-            >
+          <div class="div--title">
+            <mat-checkbox [disabled]="!totalPoints && !magiaCombativa" (change)="othersOptions(magiaCombativa)"
+              class="example-margin" [(ngModel)]="magiaCombativa">
+              <p class="p">Pegue outra escolha de Magia Combativa</p>
+            </mat-checkbox>
           </div>
         </li>
       </ul>
     </div>
+    <!-- FIM outras opções -->
 
     <mat-action-row>
-      <button
-        *ngIf="pontosAvancados"
-        mat-button
-        color="primary"
-        (click)="nextStepMelhorias()"
-      >
+      <button *ngIf="pontosAvancados" mat-button color="primary" (click)="nextStepMelhorias()">
         Melhorias Avançadas
       </button>
 
-      <button
-        *ngIf="!pontosAvancados"
-        mat-button
-        color="primary"
-        (click)="nextStepMagia()"
-      >
+      <button *ngIf="!pontosAvancados" mat-button color="primary" (click)="nextStepMagia()">
         OK
       </button>
     </mat-action-row>
   </mat-expansion-panel>
+  <!-- FIM Distribuição de pontos -->
 
   <!-- Melhorias Avançadas -->
-  <mat-expansion-panel
-    *ngIf="showMelhoriaAvancada"
-    expanded="true"
-    class="card__principal"
-    (opened)="panelOpenState = true"
-    (closed)="panelOpenState = false"
-  >
+  <mat-expansion-panel *ngIf="showMelhoriaAvancada" expanded="true" class="card__principal"
+    (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Melhorias Avançadas
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>Você tem {{ pontosAvancados }} ponto(s) para gastar, escolha como:</p>
+    <p class="p">Você tem {{ pontosAvancados }} ponto(s) para gastar, escolha como:</p>
 
     <div class="col-sm-6 boxEtapas--melhorias-opcoes" align="center">
-      <div class="etapas">
-        <ul class="ul_outras-opces">
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                class="example-margin"
-                [disabled]="!pontosAvancados && !op1"
-                (change)="melhoriasAvancadasClassificacao(op1)"
-                [(ngModel)]="op1"
-              >
-                <p>
+      <div class="div">
+        <ul class="div__list">
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox class="example-margin" [disabled]="!pontosAvancados && !op1"
+                (change)="melhoriasAvancadasClassificacao(op1)" [(ngModel)]="op1">
+                <p class="p">
                   Receba +1 em qualquer classificação (máximo +3).
-                </p></mat-checkbox
-              >
+                </p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                class="example-margin"
-                (change)="melhoriasAvancadas(op2)"
-                [disabled]="!pontosAvancados && !op2"
-                [(ngModel)]="op2"
-                ><p>Mude este caçador para um novo tipo.</p></mat-checkbox
-              >
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox class="example-margin" (change)="melhoriasAvancadas(op2)"
+                [disabled]="!pontosAvancados && !op2" [(ngModel)]="op2">
+                <p class="p">Mude este caçador para um novo tipo.</p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                class="example-margin"
-                (change)="melhoriasAvancadas(op3)"
-                [disabled]="!pontosAvancados && !op3"
-                [(ngModel)]="op3"
-                ><p>
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox class="example-margin" (change)="melhoriasAvancadas(op3)"
+                [disabled]="!pontosAvancados && !op3" [(ngModel)]="op3">
+                <p class="p">
                   Crie um segundo caçador para jogar junto com este.
-                </p></mat-checkbox
-              >
+                </p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                class="example-margin"
-                (change)="melhoriasAvancadas(op4)"
-                [disabled]="!pontosAvancados && !op4"
-                [(ngModel)]="op4"
-                ><p>
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox class="example-margin" (change)="melhoriasAvancadas(op4)"
+                [disabled]="!pontosAvancados && !op4" [(ngModel)]="op4">
+                <p class="p">
                   Marque dois dos movimentos básicos como avançados.
-                </p></mat-checkbox
-              >
+                </p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                [disabled]="!pontosAvancados && !op5"
-                (change)="melhoriasAvancadas(op5)"
-                class="example-margin"
-                [(ngModel)]="op5"
-                ><p>
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox [disabled]="!pontosAvancados && !op5" (change)="melhoriasAvancadas(op5)"
+                class="example-margin" [(ngModel)]="op5">
+                <p class="p">
                   Marque outros dois dos movimentos básicos como avançados.
-                </p></mat-checkbox
-              >
+                </p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                [disabled]="!pontosAvancados && !op6"
-                (change)="melhoriasAvancadas(op6)"
-                class="example-margin"
-                [(ngModel)]="op6"
-                ><p>
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox [disabled]="!pontosAvancados && !op6" (change)="melhoriasAvancadas(op6)"
+                class="example-margin" [(ngModel)]="op6">
+                <p class="p">
                   Aposente este caçador para uma vida segura.
-                </p></mat-checkbox
-              >
+                </p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                [disabled]="!pontosAvancados && !op7"
-                (change)="melhoriasAvancadas(op7)"
-                class="example-margin"
-                [(ngModel)]="op7"
-                ><p>Apague uma caixa marcada de Sorte.</p></mat-checkbox
-              >
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox [disabled]="!pontosAvancados && !op7" (change)="melhoriasAvancadas(op7)"
+                class="example-margin" [(ngModel)]="op7">
+                <p class="p">Apague uma caixa marcada de Sorte.</p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                [disabled]="!pontosAvancados && !op8"
-                (change)="melhoriasAvancadas(op8)"
-                class="example-margin"
-                [(ngModel)]="op8"
-                ><p>Pegue outra escolha de Magia Combativa.</p></mat-checkbox
-              >
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox [disabled]="!pontosAvancados && !op8" (change)="melhoriasAvancadas(op8)"
+                class="example-margin" [(ngModel)]="op8">
+                <p class="p">Pegue outra escolha de Magia Combativa.</p>
+              </mat-checkbox>
             </div>
           </li>
 
-          <li class="ul_outras-opces">
-            <div class="title">
-              <mat-checkbox
-                [disabled]="!pontosAvancados && !op9"
-                (change)="melhoriasAvancadas(op9)"
-                class="example-margin"
-                [(ngModel)]="op9"
-                ><p>
+          <li class="div__list--item">
+            <div class="div--title">
+              <mat-checkbox [disabled]="!pontosAvancados && !op9" (change)="melhoriasAvancadas(op9)"
+                class="example-margin" [(ngModel)]="op9">
+                <p class="p">
                   Você pode eliminar outra opção das suas Ferramentase técnicas.
-                </p></mat-checkbox
-              >
+                </p>
+              </mat-checkbox>
             </div>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- Escolha da opção 1 -->
-    <div
-      *ngIf="op1"
-      class="col-sm-6 boxEtapas--melhorias-classidicacao"
-      align="center"
-    >
-      <div class="etapas">
-        <ul>
-          <li>
-            <button
-              (click)="diminuiValorMelhorias('braveza')"
-              class="button-fab redondo--color-braveza"
-              mat-mini-fab
-              color=""
-              aria-label="Example icon button with a menu icon"
-            >
+    <!-- Escolha da opção -->
+    <div *ngIf="op1" class="col-sm-6 boxEtapas--melhorias-classidicacao" align="center">
+      <div class="div">
+        <ul class="div__list">
+          <li class="div__list--item">
+            <button (click)="diminuiValorMelhorias('braveza')" class="button-fab div--redondo--color-braveza"
+              mat-mini-fab color="" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValorMelhorias('braveza')"
-              class="button-fab redondo--color-braveza"
-              mat-mini-fab
-              color=""
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValorMelhorias('braveza')" class="button-fab div--redondo--color-braveza"
+              mat-mini-fab color="" aria-label="Example icon button with a menu icon">
               +
             </button>
 
-            <div class="redondo redondo--color-braveza">
+            <div class="div--redondo div--redondo--color-braveza">
               {{ arcano.braveza }}
             </div>
-            <div class="title">braveza</div>
+            <div class="div--title">braveza</div>
           </li>
-          <li>
-            <button
-              (click)="diminuiValorMelhorias('esperteza')"
-              class="button-fab redondo--color-esperteza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValorMelhorias('esperteza')" class="button-fab div--redondo--color-esperteza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValorMelhorias('esperteza')"
-              class="button-fab redondo--color-esperteza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValorMelhorias('esperteza')" class="button-fab div--redondo--color-esperteza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-esperteza">
+            <div class="div--redondo div--redondo--color-esperteza">
               {{ arcano.esperteza }}
             </div>
-            <div class="title">Esperteza</div>
+            <div class="div--title">Esperteza</div>
           </li>
-          <li>
-            <button
-              (click)="diminuiValorMelhorias('estranheza')"
-              class="button-fab redondo--color-estranheza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValorMelhorias('estranheza')" class="button-fab div--redondo--color-estranheza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValorMelhorias('estranheza')"
-              class="button-fab redondo--color-estranheza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValorMelhorias('estranheza')" class="button-fab div--redondo--color-estranheza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-estranheza">
+            <div class="div--redondo div--redondo--color-estranheza">
               {{ arcano.estranheza }}
             </div>
-            <div class="title">Estranheza</div>
+            <div class="div--title">Estranheza</div>
           </li>
-          <li>
-            <button
-              (click)="diminuiValorMelhorias('firmeza')"
-              class="button-fab redondo--color-firmeza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValorMelhorias('firmeza')" class="button-fab div--redondo--color-firmeza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValorMelhorias('firmeza')"
-              class="button-fab redondo--color-firmeza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValorMelhorias('firmeza')" class="button-fab div--redondo--color-firmeza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-firmeza">
+            <div class="div--redondo div--redondo--color-firmeza">
               {{ arcano.firmeza }}
             </div>
-            <div class="title">Firmeza</div>
+            <div class="div--title">Firmeza</div>
           </li>
 
-          <li>
-            <button
-              (click)="diminuiValorMelhorias('sutileza')"
-              class="button-fab redondo--color-sutileza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+          <li class="div__list--item">
+            <button (click)="diminuiValorMelhorias('sutileza')" class="button-fab div--redondo--color-sutileza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               -
             </button>
-            <button
-              (click)="aumentaValorMelhorias('sutileza')"
-              class="button-fab redondo--color-sutileza"
-              mat-mini-fab
-              color="primary"
-              aria-label="Example icon button with a menu icon"
-            >
+            <button (click)="aumentaValorMelhorias('sutileza')" class="button-fab div--redondo--color-sutileza"
+              mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
               +
             </button>
-            <div class="redondo redondo--color-sutileza">
+            <div class="div--redondo div--redondo--color-sutileza">
               {{ arcano.sutileza }}
             </div>
-            <div class="title">Sutileza</div>
+            <div class="div--title">Sutileza</div>
           </li>
         </ul>
       </div>
     </div>
+
+    <!-- Fim escolha opção -->
     <mat-action-row>
       <button mat-button color="primary" (click)="nextStepMagia()">
         OK
       </button>
     </mat-action-row>
   </mat-expansion-panel>
+  <!-- FIM Melhorias Avançadas -->
+
 </mat-accordion>

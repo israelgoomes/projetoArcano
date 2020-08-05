@@ -1,168 +1,181 @@
-.card__principal {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 120px;
+.card-principal {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 120px;
 }
 
-.card__principal--mobile {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
-  display: none;
+.card-principal--mobile {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: none;
 }
-.card__principal--mobile-character {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 120px;
-  display: none;
-}
-
-.card__principal-web--character {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
+.card-principal--mobile-personagem {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 120px;
+    display: none;
 }
 
-.card__principal-web {
-  max-width: 1024px;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 120px;
-}
-p {
-  white-space: normal;
-  display: block;
-  overflow-wrap: break-word;
-  text-align: center;
+.card-principal--web-personagem {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
-.button {
-  float: right;
+.card-principal--web {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 120px;
 }
-
-.redondo {
-  color: white;
-  border-radius: 100%;
-  overflow: hidden;
-  height: 50px;
-  width: 50px;
-  border: 1px solid transparent;
-  line-height: 50px;
-  float: left;
-}
-.redondo--color-braveza {
-  background-color: #d94e41;
-}
-
-.redondo--color-esperteza {
-  background-color: #395953;
-}
-
-.redondo--color-estranheza {
-  background-color: #8c856d;
-}
-
-.redondo--color-firmeza {
-  background-color: #412c38;
-}
-
-.redondo--color-sutileza {
-  background-color: #7638c2;
-}
-
-.boxEtapas {
-  overflow: hidden;
-  width: 48%;
-  /* float: left; */
-  text-align: center;
-}
-.etapas {
-  margin: 0 auto;
-  text-align: center;
-}
-.etapas ul {
-  list-style: none;
-}
-.etapas ul,
-li {
-  margin-bottom: 15px;
-  width: 100%;
-  display: table;
-  line-height: 50px;
-}
-
-.title {
-  float: left;
-  text-indent: 20px;
-}
-
-.card__princpal--preview {
-}
-
-.description {
-  float: left;
-  text-align: left;
-}
-
-mat-form-field {
-  width: 100%;
-}
-
-mat-radio-button {
-  padding: 10px;
-}
-
-.card-character-web {
-  width: 100%;
-}
-
-@media only screen and (max-width: 850px) {
-  p {
+.p {
     white-space: normal;
     display: block;
     overflow-wrap: break-word;
     text-align: center;
-  }
-  .boxEtapas {
-    overflow: hidden;
-    width: 100%;
-    float: left;
-  }
-  .card__principal-web {
-    display: none;
-  }
-  .card__principal--mobile {
-    display: block;
-  }
-  .card__principal-web--character {
-    display: none;
-  }
-  .card__principal--mobile-character {
-    display: block;
-  }
 }
 
-mat-grid-list {
-  height: 100%;
+.button {
+    float: right;
+}
+
+.div--redondo {
+    color: white;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    line-height: 50px;
+    float: left;
+}
+.div--redondo--color-braveza {
+    background-color: #d94e41;
+}
+
+.div--redondo--color-esperteza {
+    background-color: #395953;
+}
+
+.div--redondo--color-estranheza {
+    background-color: #8c856d;
+}
+
+.div--redondo--color-firmeza {
+    background-color: #412c38;
+}
+
+.div--redondo--color-sutileza {
+    background-color: #7638c2;
+}
+
+.boxEtapas {
+    overflow: hidden;
+    width: 48%;
+    text-align: center;
+}
+.div {
+    margin: 0 auto;
+    text-align: center;
+}
+.div .div__list {
+    list-style: none;
+}
+.div .div__list,
+.div__list--item {
+    margin-bottom: 15px;
+    width: 100%;
+    display: table;
+    line-height: 50px;
+}
+
+.title {
+    float: left;
+    text-indent: 20px;
+}
+
+.description {
+    float: left;
+    text-align: left;
+}
+
+.card-principal__form {
+    width: 100%;
+}
+
+.radio-button {
+    padding: 10px;
+}
+.grid-list {
+   height: 100%;
 }
 
 .p-personagem {
-  text-align: left;
+    text-align: left;
 }
 
-mat-slider {
-  width: 300px;
-  color: black;
+.slider__salvo-ileso {
+    width: 300px;
+    color: black;
 }
+
 .p_instavel {
-  color: red;
+    color: red;
 }
 
 .p_nao-instavel {
-  color: white;
+    color: white;
 }
-p {
-  text-align: left;
+
+.card-personagem-web {
+    width: 100%;
+}
+
+.p--personagem {
+    text-align: left;
+}
+
+.p--instavel {
+    color: red;
+    text-align: left;
+}
+
+.p--nao-instavel {
+    color: white;
+    text-align: left;
+}
+.p--aviso {
+    text-align: left;
+}
+.p--slider {
+    text-align: left;
+}
+
+@media only screen and (max-width: 850px) {
+  .p {
+      white-space: normal;
+      display: block;
+      overflow-wrap: break-word;
+      text-align: center;
+  }
+  .boxEtapas {
+      overflow: hidden;
+      width: 100%;
+      float: left;
+  }
+  .card-principal--web {
+      display: none;
+  }
+  .card-principal--mobile {
+      display: block;
+  }
+  .card-principal--web-personagem {
+      display: none;
+  }
+  .card-principal--mobile-personagem {
+      display: block;
+  }
 }

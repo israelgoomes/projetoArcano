@@ -1,4 +1,4 @@
-<mat-expansion-panel expanded="true" class="card__principal">
+<mat-expansion-panel expanded="true" class="card-principal">
   <mat-expansion-panel-header>
     <mat-panel-title>
       Pontos
@@ -11,24 +11,24 @@
         Movimentos Básicos
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <p>
+    <p class="p">
       • Consumíveis: Você precisa ter certos suprimentos — pós,óleos, etc. — a
       mão para lançar seu feitiço. Eles são consu-midos quando você lança o
       feitiço. Se você não os tiver amão, seu corpo será o substituto: receba
       [1-dano ignora-armadura] quando lançar.
     </p>
-    <p>
+    <p class="p">
       • Focos: Você precisa de varinhas, cajados e outros imple-mentos
       chamativos para focar seus esforços de forma maispoderosa. Se você não
       tiver o que precisa a mão, sua magiacombativa causa −1 de dano.
     </p>
-    <p>
+    <p class="p">
       • Gestos: Você precisa ser capaz de gesticular com suas mãosde forma
       chamativa para poder usar sua magia combativa.Se você estiver preso de
       alguma forma você ainda conse-gue lançar o feitiço, mas as chances de dar
       errado são mai-ores; receba −1 constante em sua magia combativa.
     </p>
-    <p>
+    <p class="p">
       Encantamentos: Você precisa falar em uma linguagem místi-ca para controlar
       sua magia sem filtrá-la diretamente comsua mente. Se você usar um feitiço
       de magia combativa,com sucesso ou falha, enquanto não pode ou não quer
@@ -38,80 +38,66 @@
     </p>
   </mat-expansion-panel>
 
-  <p>Escolha até {{ totalPoints }} movimentos:</p>
+  <p class="p">Escolha até {{ totalPoints }} movimentos:</p>
 
-  <ul class="ul_outras-opces">
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          (change)="othersOptions(treinoMagicoAvancado)"
-          [disabled]="!totalPoints && !treinoMagicoAvancado"
-          [(ngModel)]="treinoMagicoAvancado"
-        >
-          <p>
+  <ul class="list">
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" (change)="othersOptions(treinoMagicoAvancado)"
+          [disabled]="!totalPoints && !treinoMagicoAvancado" [(ngModel)]="treinoMagicoAvancado">
+          <p class="p">
             Treinamento mágico avançado: Se você tiver duas de suastrês
             Ferramentas e técnicas à disposição, você pode ignorara terceira.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          (change)="othersOptions(reputacaoMagica)"
-          [disabled]="!totalPoints && !reputacaoMagica"
-          [(ngModel)]="reputacaoMagica"
-        >
-          <p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" (change)="othersOptions(reputacaoMagica)"
+          [disabled]="!totalPoints && !reputacaoMagica" [(ngModel)]="reputacaoMagica">
+          <p class="p">
             Reputação mágica: Escolha três grandes grupos ou organiza-ções da
             comunidade sobrenatural, o que pode incluir algunsdos tipos mais
             sociáveis de monstros. Eles ouviram falar vocêe respeitam seu poder.
             Com humanos afetados, receba +1 adi-ante para manipular alguém. Você
             pode usar manipular al-guém em monstros afetados como se eles fossem
             humanos,mas sem bônus.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          (change)="othersOptions(vestuarioEncantado)"
-          [disabled]="!totalPoints && !vestuarioEncantado"
-          [(ngModel)]="vestuarioEncantado"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" (change)="othersOptions(vestuarioEncantado)"
+          [disabled]="!totalPoints && !vestuarioEncantado" [(ngModel)]="vestuarioEncantado">
+          <p class="p">
             Vestuário encantado: Escolha uma peça de vestuário do dia adia — ela
             está encantada sem nenhuma alteração na aparência.Receba 1 de dano a
             menos de qualquer coisa que tentar te acer-tar através da peça de
             roupa.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="!totalPoints && !poderiaSerPior"
-          (change)="othersOptions(poderiaSerPior)"
-          class="example-margin"
-          [(ngModel)]="poderiaSerPior"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="!totalPoints && !poderiaSerPior" (change)="othersOptions(poderiaSerPior)"
+          class="example-margin" [(ngModel)]="poderiaSerPior">
+          <p class="p">
             Poderia ser pior: Quando você falhar em uma rolagempara usar magia
             você pode usar uma das seguintes op-ções em vez de perder o controle
             da magia:
           </p>
-          <p>
+          <p class="p">
             • Fiasco: As preparações e materiais para o feitiço fo-ram
             arruinados. Você terá que começar do zerocom o tempo de preparação
             dobrado.
           </p>
-          <p>
+          <p class="p">
             • Isso não vai ser bom: O efeito acontece, mas você aci-ona todos os
             defeitos listados menos um. Você es-colhe qual defeito vai evitar.
           </p>
@@ -119,93 +105,74 @@
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="!totalPoints && !adivinhaForense"
-          (change)="othersOptions(adivinhaForense)"
-          class="example-margin"
-          [(ngModel)]="adivinhaForense"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="!totalPoints && !adivinhaForense" (change)="othersOptions(adivinhaForense)"
+          class="example-margin" [(ngModel)]="adivinhaForense">
+          <p class="p">
             Adivinhação forense: Quando você investigar ummistério com sucesso,
             você pode perguntar “Que ma-gia foi feita aqui?” como uma pergunta
             extra e gratuita.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="!totalPoints && !comTudoPraCasa"
-          (change)="othersOptions(comTudoPraCasa)"
-          class="example-margin"
-          [(ngModel)]="comTudoPraCasa"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="!totalPoints && !comTudoPraCasa" (change)="othersOptions(comTudoPraCasa)"
+          class="example-margin" [(ngModel)]="comTudoPraCasa">
+          <p class="p">
             Vá com tudo ou vá pra casa: Quando você precisarusar magia como um
             requisito de magia grandiosa,receba +1 constante nestas rolagens de
             usar magia.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="!totalPoints && !minhaCulpa"
-          (change)="othersOptions(minhaCulpa)"
-          class="example-margin"
-          [(ngModel)]="minhaCulpa"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="!totalPoints && !minhaCulpa" (change)="othersOptions(minhaCulpa)"
+          class="example-margin" [(ngModel)]="minhaCulpa">
+          <p class="p">
             Não é minha culpa: Receba +1 para agir sob pressãoquando estiver
             lidando com as consequências dos seuspróprios feitiços.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="!totalPoints && !praticante"
-          (change)="othersOptions(praticante)"
-          class="example-margin"
-          [(ngModel)]="praticante"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="!totalPoints && !praticante" (change)="othersOptions(praticante)"
+          class="example-margin" [(ngModel)]="praticante">
+          <p class="p">
             Praticante: Escolha dois efeitos dos disponíveis deusar magia.
             Receba +1 para usar magia sempre que es-colher um destes efeitos.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          [disabled]="!totalPoints && !escudoMagico"
-          (change)="othersOptions(escudoMagico)"
-          class="example-margin"
-          [(ngModel)]="escudoMagico"
-          ><p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox [disabled]="!totalPoints && !escudoMagico" (change)="othersOptions(escudoMagico)"
+          class="example-margin" [(ngModel)]="escudoMagico">
+          <p class="p">
             Escudo mágico: Quando você proteger alguém, vocêrecebe [2-armadura]
             contra qualquer dano que sejatransferido para você. Isto não acumula
             com outras ar-maduras, se houver.
-          </p></mat-checkbox
-        >
+          </p>
+        </mat-checkbox>
       </div>
     </li>
 
-    <li class="ul_outras-opces">
-      <div class="title">
-        <mat-checkbox
-          class="example-margin"
-          [disabled]="!totalPoints && !terceiroOlho"
-          (change)="othersOptions(terceiroOlho)"
-          [(ngModel)]="terceiroOlho"
-        >
-          <p>
+    <li class="list__item">
+      <div class="div--title">
+        <mat-checkbox class="example-margin" [disabled]="!totalPoints && !terceiroOlho"
+          (change)="othersOptions(terceiroOlho)" [(ngModel)]="terceiroOlho">
+          <p class="p">
             Terceiro olho: Quando você perceber uma enrascada,você pode abrir
             seu terceiro olho por um momentopara perceber informações extras.
             Receba +1 de reservaem qualquer resultado 7 ou maior, você também
